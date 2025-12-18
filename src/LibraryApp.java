@@ -24,7 +24,8 @@ public class LibraryApp {
             System.out.print("Enter number to choose: ");
             userChoice = input.nextInt();
             input.nextLine();
-
+            //Че за баг такой емае
+            //https://www.youtube.com/watch?v=cUwt3oDkA7I 💃💃💃
             switch (userChoice) {
                 case 1:
                     printAllBooks();
@@ -153,6 +154,7 @@ public class LibraryApp {
         System.out.println("application exited");
     }
 
+    //GPT copied logic :pray:
     private Book findBookById(int id) {
         for (Book x : books) {
             if (x.getId() == id) {
