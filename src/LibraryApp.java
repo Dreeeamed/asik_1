@@ -26,6 +26,7 @@ public class LibraryApp {
             input.nextLine();
             //Че за баг такой емае
             //https://www.youtube.com/watch?v=cUwt3oDkA7I 💃💃💃
+            //The actual bug: In Java, nextInt() reads the number but leaves the "Enter" key (newline character \n) sitting in the buffer. * If your next command is nextLine(), it will immediately "eat" that leftover "Enter" key and return an empty string instead of waiting for your input.
             switch (userChoice) {
                 case 1:
                     printAllBooks();
@@ -89,17 +90,18 @@ public class LibraryApp {
     private void searchBooksByTitle() {
         System.out.print("Enter title: ");
         String title = input.nextLine().toLowerCase();
-        boolean isfound = false;
+        int pupupu = 0;
 
         for(Book x : books){
             if(x.getTitle().toLowerCase().contains(title)){
                 System.out.println(x);
-                isfound = true;
+            }
+            else{
+                System.out.println("There is no book named:" + title);
             }
         }
-        if(!isfound) {
-            System.out.println("There is no book named:" + title);
-        }
+        System.out.println("Found " + pupupu + " books were found.");
+
     }
 
     private void borrowBook() {

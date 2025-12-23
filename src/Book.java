@@ -1,6 +1,6 @@
 public class Book {
     private int id;
-    private int idGen = 1;
+    private static int idGen = 1;
     private String title;
     private String author;
     private int year;
