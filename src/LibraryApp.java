@@ -54,7 +54,6 @@ public class LibraryApp {
                 case 7:
                     quit();
                     break;
-
                 default:
                     System.out.println("Invalid choice. Try again.");
             }

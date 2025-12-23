@@ -30,18 +30,30 @@ public class Rectangle{
         this.width = width;
     }
 
-    public double area(double width, double height) {
-        return width * height;
+    public double getHeight() {
+        return height;
     }
 
-    public double perimeter(double width, double height) {
-        return 2 * width + 2 * height;
+    public double getWidth() {
+        return width;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public double area() {
+        return this.width * this.height;
+    }
+
+    public double perimeter() {
+        return 2 * this.width + 2 * this.height;
     }
 
     @Override
     public String toString() {
-        return "id = " + id +
-                "width = " + width +
-                "height = " + height;
+        return "rectangle, id: " + getId() + ";\n" +
+                "width = " + getWidth() + "\n" +
+                "height = " + getHeight();
     }
 }
